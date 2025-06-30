@@ -22,15 +22,6 @@ export default tseslint.config(
             react.configs.flat.recommended,
             react.configs.flat["jsx-runtime"],
         ],
-        files: [
-            "client/**/*.{ts,tsx}",
-            "migrations/**/*.js",
-            "server/**/*.ts",
-            "type/**/*.ts",
-            "eslint.config.js",
-            "prettier.config.js",
-            "vite.config.ts",
-        ],
         languageOptions: {
             ecmaVersion: 2020,
             globals: globals.browser,
