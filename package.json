@@ -1,8 +1,16 @@
 {
   "name": "@vinorcola/lint",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Custom ESlint+Prettier configurations.",
   "keywords": ["eslint", "eslintconfig", "prettier", "prettierconfig", "lint"],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vinorcola/lint.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Vinorcola/lint/issues"
+  },
+  "homepage": "https://github.com/Vinorcola/lint#readme",
   "type": "module",
   "main": "index.js",
   "author": "Vinorcola",
