@@ -1,26 +1,28 @@
-import js from "@eslint/js"
-import pluginImport from "eslint-plugin-import"
-import pluginPrettierRecommended from "eslint-plugin-prettier/recommended"
-import react from "eslint-plugin-react"
-import reactHooks from "eslint-plugin-react-hooks"
-import reactRefresh from "eslint-plugin-react-refresh"
-import unusedImports from "eslint-plugin-unused-imports"
+import javascriptPlugin from "@eslint/js"
+import importPlugin from "eslint-plugin-import"
+import prettierPluginRecommended from "eslint-plugin-prettier/recommended"
+import reactPlugin from "eslint-plugin-react"
+import reactHooksPlugin from "eslint-plugin-react-hooks"
+import reactRefreshPlugin from "eslint-plugin-react-refresh"
+import tailwindcssPlugin from "eslint-plugin-tailwindcss"
+import unusedImportsPlugin from "eslint-plugin-unused-imports"
 import globals from "globals"
-import tseslint from "typescript-eslint"
+import typescriptPlugin from "typescript-eslint"
 
-export default tseslint.config(
+export default typescriptPlugin.config(
     {
         ignores: ["build"],
     },
     {
         extends: [
-            js.configs.recommended,
-            ...tseslint.configs.recommended,
-            pluginPrettierRecommended,
-            pluginImport.flatConfigs.recommended,
-            pluginImport.flatConfigs.typescript,
-            react.configs.flat.recommended,
-            react.configs.flat["jsx-runtime"],
+            javascriptPlugin.configs.recommended,
+            ...typescriptPlugin.configs.recommended,
+            importPlugin.flatConfigs.recommended,
+            importPlugin.flatConfigs.typescript,
+            prettierPluginRecommended,
+            reactPlugin.configs.flat.recommended,
+            reactPlugin.configs.flat["jsx-runtime"],
+            ...tailwindcssPlugin.configs["flat/recommended"],
         ],
         languageOptions: {
             ecmaVersion: 2020,
@@ -35,12 +37,12 @@ export default tseslint.config(
             },
         },
         plugins: {
-            "react-hooks": reactHooks,
-            "react-refresh": reactRefresh,
-            "unused-imports": unusedImports,
+            "react-hooks": reactHooksPlugin,
+            "react-refresh": reactRefreshPlugin,
+            "unused-imports": unusedImportsPlugin,
         },
         rules: {
-            ...reactHooks.configs.recommended.rules,
+            ...reactHooksPlugin.configs.recommended.rules,
             "@typescript-eslint/consistent-type-imports": "warn",
             "@typescript-eslint/no-explicit-any": "off",
             "@typescript-eslint/no-unused-vars": "off", // Overriden by unused-imports
