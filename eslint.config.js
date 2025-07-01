@@ -4,7 +4,6 @@ import prettierPluginRecommended from "eslint-plugin-prettier/recommended"
 import reactPlugin from "eslint-plugin-react"
 import reactHooksPlugin from "eslint-plugin-react-hooks"
 import reactRefreshPlugin from "eslint-plugin-react-refresh"
-import tailwindcssPlugin from "eslint-plugin-tailwindcss"
 import unusedImportsPlugin from "eslint-plugin-unused-imports"
 import globals from "globals"
 import typescriptPlugin from "typescript-eslint"
@@ -22,7 +21,6 @@ export default typescriptPlugin.config(
             prettierPluginRecommended,
             reactPlugin.configs.flat.recommended,
             reactPlugin.configs.flat["jsx-runtime"],
-            ...tailwindcssPlugin.configs["flat/recommended"],
         ],
         languageOptions: {
             ecmaVersion: 2020,
