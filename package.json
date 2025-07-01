@@ -1,6 +1,6 @@
 {
   "name": "@vinorcola/lint",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Custom ESlint+Prettier configurations.",
   "keywords": ["eslint", "eslintconfig", "prettier", "prettierconfig", "lint"],
   "repository": {
