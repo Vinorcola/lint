@@ -91,6 +91,7 @@ export default typescriptPlugin.config(
                     endOfLine: "lf",
                 },
             ],
+            "react/display-name": "warn",
             "react/jsx-curly-brace-presence": [
                 "warn",
                 {
